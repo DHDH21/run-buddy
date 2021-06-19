@@ -78,10 +78,8 @@
   /* Hero Style Start */
 .hero {
      background-image: url(../images/hero-bg.jpg);
-     height: 600px;
      background-size: cover;
-     background-position: center;
-     position: relative; 
+     background-position: center; 
      display: flex;
      justify-content: center;
      flex-wrap: wrap;
@@ -114,12 +112,7 @@
     border: 3px solid #024e76;
     background-color: #fce138;
     padding: 20px;
-    width: 500px;
-  
     color: #024e76;
-    position: absolute;
-    bottom: 120px;
-    right: 140px;
     width: 40%;
     margin: 3.5%;
   }
@@ -159,7 +152,6 @@
     color: #39a6b2;
     width: 80%;
     font-size: 20px;
-    /* add this alongside your other declarations */
     margin: 0 auto;
     text-align: center;
 }
@@ -189,12 +181,7 @@
 
 
 
-.steps h3 {
-    color: #024e76;
-    font-size: 46px;
-}
-
-.steps-text p {
+.step-text p {
     color: #39a6b2;
     font-size: 18px;
 }
@@ -291,8 +278,7 @@
   font-size: 32px;
 }
 
-.contact-info p, 
-.contact-info address {
+.contact-info p, .contact-info address {
   margin: 20px 0;
   line-height: 1.5;
   font-size: 16px;
@@ -322,6 +308,8 @@
 
 .step h3 {
   flex: 1 30%;
+  color: #024e76;
+  font-size: 46px;
 }
 
 .step-info {
