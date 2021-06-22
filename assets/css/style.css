@@ -30,6 +30,7 @@
     font-size: 36px;
     color: #fce138;
     margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
   header a {
@@ -53,6 +54,7 @@
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   footer {
@@ -81,6 +83,9 @@
       color: #024e76;
   }
 
+section {
+  padding: 60px;
+}
 
   /* Hero Style Start */
 .hero {
@@ -116,6 +121,7 @@
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
   }
 
 .hero-form {
@@ -220,17 +226,12 @@
   align-items: center;
   justify-content: space-between;
   /* re-add alongside existing declarations */
-
+  border-bottom: 1px solid #39a6b2;
   
 }
 
-.step:not(:last-child) {
-  border-bottom: 1px solid #39a6b2;
-}
-
-
-.step:nth-child(even) {
-  border-bottom: 1px solid #39a6b2;
+.step:last-child {
+  border-bottom: none;
 }
 
 .trainers {
@@ -372,12 +373,13 @@
   margin-bottom: 15px;
   margin-top: 5px;
   border-radius: 10px;
-  background-color: rgba(255,255,255, 1);
+  background-color: rgba(255,255,255, 0.75);
 
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
-
+  background-color: rgba(225,225,225, 1);
+  outline: none;
 }
 
 .contact-form button {
