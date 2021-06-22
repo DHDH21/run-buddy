@@ -16,6 +16,13 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
   }
 
   header h1 {
@@ -79,7 +86,8 @@
 .hero {
      background-image: url(../images/hero-bg.jpg);
      background-size: cover;
-     background-position: center; 
+     background-position: 80%;
+     background-attachment: fixed; 
      display: flex;
      justify-content: center;
      flex-wrap: wrap;
@@ -99,6 +107,7 @@
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
 .hero-form button {
@@ -111,11 +120,13 @@
 
 .hero-form {
     border: 3px solid #024e76;
+    border-radius: 15px;
     background-color: #fce138;
     padding: 20px;
     color: #024e76;
     width: 40%;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
 .hero-form p {
@@ -145,8 +156,15 @@
       color: #024e76;
       width: 100%;
       margin-bottom: 15px;
+      border-radius: 10px;
+      background-color: rgba(225,225,225, 0.75);
   }
 
+
+.form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+  }  
 
 .intro p {
     line-height: 1.7;
@@ -197,11 +215,22 @@
   margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
-  border-bottom: 1px solid #39a6b2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  /* re-add alongside existing declarations */
+
+  
+}
+
+.step:not(:last-child) {
+  border-bottom: 1px solid #39a6b2;
+}
+
+
+.step:nth-child(even) {
+  border-bottom: 1px solid #39a6b2;
 }
 
 .trainers {
@@ -342,6 +371,12 @@
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255, 1);
+
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
 
 }
 
@@ -353,6 +388,7 @@
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
+  border-radius: 10px;
 }
 
 
@@ -362,11 +398,13 @@
   header {
     padding-bottom: 0;
     justify-content: center;
+    position: relative;
   }
 
   header h1 {
     width: 100%;
     text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   header nav ul {
@@ -377,6 +415,7 @@
 
   header nav ul li a {
     font-size: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   footer h2, footer div {
@@ -439,6 +478,7 @@
 
   .hero-form button {
     width: 100%;
+    border-radius: 10px;
   }
 
   .section-title {
@@ -464,4 +504,46 @@
   .contact-form {
     order: 3;
   }
+}
+
+.some-class {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* default state */
+button {
+  background: white;
+}
+
+/* mouse is hovering over button */
+button:hover {
+  background: red;
+}
+
+/* button is in focus because it was the most recently clicked element on the page */
+button:focus {
+  background: green;
+}
+
+/* user is actively pressing the cursor down on the button */
+button:active {
+  background: blue;
+}
+
+header nav ul li a:hover {
+  background: #fce138;
+  color: #024e76;
+  border-radius: 15px;
+  text-shadow: none;
+}
+
+.hero-form button:hover {
+  background-color: #39a6b2;  
+}
+
+.contact-form button:hover {
+  color: #fce138;
+  background: #39a6b2;
 }
